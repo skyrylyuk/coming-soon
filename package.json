@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.js --progress --open",
+    "start": "node ./node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node ./node_modules/webpack-dev-server/bin/webpack-dev-server --config webpack.config.js --mode development --progress --open",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "watch": "webpack --watch",
@@ -14,10 +14,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cross-env": "^5.0.1",
-    "webpack": "^4.16.5",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.12",
     "webpack-dev-server": "^3.1.5",
-    "html-webpack-plugin": "^3.2.0"
+    "cross-env": "^5.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0"
   },
   "dependencies": {}
 }
