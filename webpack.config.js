@@ -23,10 +23,19 @@ module.exports = {
             use: ['css-loader']
           })
       },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract(
+          {
+            fallback: 'style-loader',
+            use: ['css-loader', 'sass-loader']
+          })
+      }
     ]
   },
   plugins: [
     new ExtractTextPlugin({filename: './src/assets/css/styles.css'}),
+    new ExtractTextPlugin({filename: './src/assets/scss/main.scss'}),
     new HtmlWebpackPlugin({ template: "./src/index.html" })
   ]
 };
