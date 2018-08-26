@@ -36,6 +36,10 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin({filename: './src/assets/css/styles.css'}),
     new ExtractTextPlugin({filename: './src/assets/scss/main.scss'}),
-    new HtmlWebpackPlugin({ template: "./src/index.html" })
+    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery"
+  })
   ]
 };
